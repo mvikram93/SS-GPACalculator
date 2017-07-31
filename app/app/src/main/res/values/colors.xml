@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="subListcolor" type="color">#2D283E</item>
+    <item name="gradeListcolor" type="color">#A86A8F</item>
+
+</resources>
