@@ -409,15 +409,12 @@ int uniq =0;
         depsem = 11;
         subadapter = new ArrayAdapter<String>(Main2Activity.this, android.R.layout.simple_list_item_1, getResources().getStringArray(data)){
             @NonNull
-            public View getView(int position, View convertView,  ViewGroup parent) {
+            public View getView(int position, View convertView, @NonNull ViewGroup parent) {
             /// Get the Item from ListView
             View view = super.getView(position, convertView, parent);
 
             TextView tv = (TextView) view.findViewById(android.R.id.text1);
-                //tv.setBackgroundResource(R.color.tvcolo);
-                //tv.setTypeface(Typeface.createFromFile("sans-serif-medium"));
 
-            // Set the text size 25 dip for ListView each item
             tv.setTextSize(TypedValue.COMPLEX_UNIT_SP,17);
                // tv.setFon
 
@@ -449,7 +446,7 @@ int uniq =0;
             @Override
             public void onClick(View v) {
 
-                List<String> selections = new ArrayList<String>();
+                List<String> selections = new ArrayList<>();
                 for (int i = 0; i < listviewpop.getChildCount(); i++) {
 
                     // Get row's spinner
@@ -480,9 +477,8 @@ int uniq =0;
 
     public void showcse6(int data, final ArrayList<Integer> elepass, final int code, final int uniq) {
         depsem = 16;
-        int n;
+
          final int size=elepass.size();
-        //Toast.makeText(getApplicationContext(), "Your ELEC subject : " + size, Toast.LENGTH_LONG).show();
 
         listview = (ListView) findViewById(R.id.listView1);
         listviewpop = (ListView) findViewById(R.id.listView2);
@@ -797,9 +793,7 @@ return s;
                 viewHolder.spinner = (Spinner) convertview.findViewById(R.id.spinner1);
                 viewHolder.spinner.setAdapter(adapter);
                 convertview.setTag(viewHolder);
-            } //else {
-              //  viewHolder = (ViewHolder) convertview.getTag();
-           // }
+            }
             return convertview;
         }
 
